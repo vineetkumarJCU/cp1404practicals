@@ -15,5 +15,3 @@ else:
         bonus = Sales * 0.15
         print("Your bonus is $", bonus)
         Sales = float(input("Enter the sales: $"))
-
-

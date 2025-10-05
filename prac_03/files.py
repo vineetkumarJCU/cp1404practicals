@@ -1,16 +1,16 @@
-#1
+# 1
 FILENAME = "name.txt"
 
 # open file for writing
 out_file = open(FILENAME, 'w')
 
 # ask the user for their name anc prints
-name =  input("Whats your name? >")
+name =  input("Whats your name? > ")
 print(name, file= out_file)
 
 out_file.close() # close the file
 
-#2
+# 2
 def load_file(filename):
     infile = open(FILENAME, 'r') # open file for reading
     read_file = infile.read()
@@ -19,7 +19,7 @@ def load_file(filename):
 
 load_file(FILENAME)
 
-#3
+# 3
 FILENAME = "numbers.txt"
 
 with open(FILENAME, 'r') as infile:
@@ -27,7 +27,7 @@ with open(FILENAME, 'r') as infile:
     number_2 = int(infile.readline())
 print(number_1 + number_2)
 
-#4
+# 4
 
 with open(FILENAME, 'r') as infile:
     total = 0

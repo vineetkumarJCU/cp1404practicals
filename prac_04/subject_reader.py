@@ -7,20 +7,26 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    data = load_data(FILENAME)
-    print(data)
+    subjects = load_subjects(FILENAME)
+    display_subjects(subjects)
 
 
-def load_data(filename=FILENAME):
-    """Read data from file formatted like: subject,lecturer,number of students."""
-    data = []
+def load_subjects(filename=FILENAME):
+    """Read subjects from file formatted like: subject,lecturer,number of students."""
+    subjects = []
     input_file = open(filename)
     for line in input_file:
         line = line.strip()  # Remove the \n
-        parts = line.split(',')  # Separate the data into its parts
+        parts = line.split(',')  # Separate the subjects into its parts
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
-        data.append(parts)
+        subjects.append(parts)
     input_file.close()
-    return data
+    return subjects
+
+def display_subjects(subjects):
+    """Display subject details."""
+    for subject in subjects:
+        print(f"{subject[0]} is taught by {subject[1]} and has {subject[2]} students")
+
 
 main()

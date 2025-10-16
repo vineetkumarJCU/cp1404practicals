@@ -26,6 +26,7 @@ def main():
             print("Invalid short state")
         state_code = input("Enter short state: ").strip().upper()
 
-
+for code, name in CODE_TO_NAME.items():
+    print(f"{code:3} is {name}")
 
 main()

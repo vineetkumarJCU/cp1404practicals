@@ -1,7 +1,7 @@
 """
 CP1404: Practical 06
 Estimate Time: 25 minutes
-Actual Time:
+Actual Time: 42 minutes
 """
 
 from programming_language import ProgrammingLanguage

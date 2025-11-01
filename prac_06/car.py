@@ -29,3 +29,7 @@ class Car:
             self.fuel -= distance
         self._odometer += distance
         return distance
+
+    def __str__(self):
+        """Return string representation of a Car."""
+        return f"Car, fuel={self.fuel}, odometer={self._odometer}"

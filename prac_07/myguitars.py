@@ -9,8 +9,13 @@ from guitar import Guitar
 
 
 def main():
-    """Set up main"""
-    pass
+    """Load guitars and display them."""
+    guitars = load_guitars("guitars.csv")
+
+    print("These are my guitars:")
+    for guitar in guitars:
+        print(guitar)
+
 
 def load_guitars(filename):
     """Load guitars from CSV into a list of Guitar objects."""

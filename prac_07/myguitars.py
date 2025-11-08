@@ -16,7 +16,6 @@ def main():
     for guitar in guitars:
         print(guitar)
 
-
 def load_guitars(filename):
     """Load guitars from CSV into a list of Guitar objects."""
     guitars = []

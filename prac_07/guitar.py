@@ -1,8 +1,6 @@
 """
-CP1404/CP5632 Practical 06
+CP1404/CP5632 Practical 07
 Guitar class
-Estimate: 15 minutes
-Actual: 35 minutes
 """
 
 from datetime import date

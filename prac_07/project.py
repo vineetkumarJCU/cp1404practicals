@@ -24,3 +24,14 @@ class Project:
         return self.priority < other.priority
 
 
+    def is_complete(self):
+        return self.completion_percentage == 100
+
+    def update(self, new_completion=None, new_priority=None):
+        if new_completion not in ("", None):
+            self.completion_percentage = int(new_completion)
+        if new_priority not in ("", None):
+            self.priority = int(new_priority)
+
+
+

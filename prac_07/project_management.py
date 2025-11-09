@@ -34,3 +34,13 @@ def main():
         choice = display_menu()
 
     print("Thank you for using custom-built project management software.")
+
+
+def display_menu():
+    """Display the menu and return user choice."""
+    print("- (L)oad projects\n- (S)ave projects\n- (D)isplay projects\n"
+          "- (F)ilter projects by date\n- (A)dd new project\n- (U)pdate project\n- (Q)uit")
+    return input(">>> ").upper()
+
+
+main()

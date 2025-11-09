@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Project Management Program
 Estimate: 90 minutes
-Actual:
+Actual: 160 minutes
 """
 
 from datetime import datetime
@@ -128,7 +128,6 @@ def update_project(projects):
     new_completion = input("New Percentage: ")
     new_priority = input("New Priority: ")
     project.update(new_completion, new_priority)
-
 
 
 main()

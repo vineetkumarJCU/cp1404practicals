@@ -96,5 +96,16 @@ def get_start_date(project):
     return project.start_date
 
 
+def add_new_project(projects):
+    print("Let's add a new project")
+    name = input("Name: ")
+    start_date_str = input("Start date (dd/mm/yy): ")
+    start_date = datetime.strptime(start_date_str, "%d/%m/%Y").date()
+    priority = int(input("Priority: "))
+    cost_estimate = float(input("Cost estimate: $"))
+    completion_percentage = int(input("Percent complete: "))
+    projects.append(Project(name, start_date, priority, cost_estimate, completion_percentage))
+
+
 
 main()

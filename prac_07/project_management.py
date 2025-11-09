@@ -20,22 +20,27 @@ def main():
     choice = display_menu()
     while choice != "Q":
         if choice == "L":
-            pass
+            filename = input("Filename to load from: ")
+            projects = load_projects(filename)
         elif choice == "S":
-            pass
+            filename = input("Filename to save to: ")
+            save_projects(filename, projects)
         elif choice == "D":
-            pass
+            display_projects(projects)
         elif choice == "F":
-            pass
+            filter_projects_by_date(projects)
         elif choice == "A":
-            pass
+            add_new_project(projects)
         elif choice == "U":
-            pass
+            update_project(projects)
         else:
             print("Invalid choice")
 
         choice = display_menu()
 
+    save_prompt = input(f"Would you like to save to {DEFAULT_FILENAME}? ").lower()
+    if save_prompt.startswith("y"):
+        save_projects(DEFAULT_FILENAME, projects)
     print("Thank you for using custom-built project management software.")
 
 

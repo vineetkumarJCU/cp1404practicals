@@ -52,6 +52,7 @@ def display_menu():
 
 
 def load_projects(filename):
+    """Load projects from text file."""
     projects = []
     with open(filename, "r", encoding="utf-8-sig") as in_file:
         in_file.readline()  # Skip header line
@@ -67,6 +68,7 @@ def load_projects(filename):
 
 
 def save_projects(filename, projects):
+    """Save all projects."""
     with open(filename, "w", encoding="utf-8-sig") as out_file:
         print("Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage", file=out_file)
         for project in projects:
@@ -75,6 +77,7 @@ def save_projects(filename, projects):
 
 
 def display_projects(projects):
+    """Display incomplete and complete projects sorted by priority."""
     incomplete = [project for project in projects if not project.is_complete()]
     complete = [project for project in projects if project.is_complete()]
 
@@ -88,6 +91,7 @@ def display_projects(projects):
 
 
 def filter_projects_by_date(projects):
+    """Show projects that start after a user-specified date."""
     date_string = input("Show projects that start after date (dd/mm/yy): ")
     filter_date = datetime.strptime(date_string, "%d/%m/%Y").date()
 
@@ -98,10 +102,12 @@ def filter_projects_by_date(projects):
 
 
 def get_start_date(project):
+    """Return the start date of a project."""
     return project.start_date
 
 
 def add_new_project(projects):
+    """Prompt user to add a new project and append it to the list."""
     print("Let's add a new project")
     name = input("Name: ")
     start_date_str = input("Start date (dd/mm/yy): ")

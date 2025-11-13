@@ -1,8 +1,8 @@
 # CP1404 Practicals
 
 ## Weekly Practicals for CP1404: Programming 2
-This repository contains all practical exercises completed by Vineet Kumar
-I am a 4th year student at James Cook University studying Bachelor of Electrical and Electronics Engineering and Bachelor of Information Technology
+This repository contains all practical exercises completed by Vineet Kumar.
+I am a 4th year student at James Cook University studying Bachelor of Electrical and Electronics Engineering and Bachelor of Information Technology.
 This subject demonstrates skills in clean coding by using Python.
 
 ---

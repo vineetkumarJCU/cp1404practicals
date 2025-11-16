@@ -1,3 +1,8 @@
+"""
+CP1404 Practical 08
+Convert Miles to Kilometres Exercise
+"""
+
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import StringProperty

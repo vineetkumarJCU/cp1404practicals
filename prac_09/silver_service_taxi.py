@@ -9,3 +9,6 @@ class SilverServiceTaxi(Taxi):
         self.fanciness = fanciness
         # Multiply instance price_per_km by fanciness
         self.price_per_km *= fanciness
+
+    def get_fare(self):
+        return super().get_fare() + self.flagfall

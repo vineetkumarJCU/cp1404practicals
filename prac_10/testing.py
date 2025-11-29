@@ -21,7 +21,7 @@ def is_long_word(word, length=5):
     >>> is_long_word("Python", 6)
     True
     """
-    return len(word) > length
+    return len(word) >= length
 
 
 def run_tests():
@@ -45,13 +45,10 @@ def run_tests():
     # using the value passed in or the default
     # You should test both of these
     car = Car(fuel=10)
+    assert car.fuel == 10, "Car default fuel incorrect"
+    car = Car()
+    assert car.fuel == 0, "Car fuel does not set correctly when initialised"
 
-
-run_tests()
-
-# TODO: 3. Uncomment the following line and run the doctests
-# (PyCharm may see your >>> doctest comments and run doctests anyway.)
-# doctest.testmod()
 
 # TODO: 4. Fix the failing is_long_word function
 # (Don't change the tests, change the function!)
@@ -65,3 +62,26 @@ run_tests()
 # and one more that you decide is a useful test.
 # Run your doctests and watch the tests fail.
 # Then write the body of the function so that the tests pass.
+
+def phrase_to_sentence(phrase):
+    """
+    Format a phrase as a sentence, starting with a capital and ending with a .
+    >>> phrase_to_sentence('hello')
+    'Hello.'
+    >>> phrase_to_sentence('It is an ex parrot.')
+    'It is an ex parrot.'
+    >>> phrase_to_sentence('This subject rocks')
+    'This subject rocks.'
+    """
+    sentence = phrase.capitalize()
+    if sentence[-1] != '.':
+        sentence = f"{sentence}."
+    return sentence
+
+
+run_tests()
+
+# TODO: 3. Uncomment the following line and run the doctests
+# (PyCharm may see your >>> doctest comments and run doctests anyway.)
+# doctest.testmod()
+doctest.testmod()
